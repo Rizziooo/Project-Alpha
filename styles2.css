@@ -1,0 +1,69 @@
+body {
+    background-color: #c7f7d7;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logo img {
+    display: block;
+    margin: 0 auto; /* Horizontaal centreren */
+}
+
+#text {
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 100%;
+}
+
+#button {
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: #4caf50; /* Groene knopkleur */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4caf50; /* Groene linkkleur */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 100%;
+    margin-bottom: 10px;
+}

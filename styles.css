@@ -19,6 +19,7 @@ body {
 #logo {
     display: block;
     margin: 0 auto 20px;
+
 }
 
 input {
@@ -43,4 +44,15 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 100%;
+    margin-bottom: 10px;
 }
