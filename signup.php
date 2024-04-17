@@ -16,19 +16,28 @@ session_start();
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
 
-			$hashed_wachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
+			$hashed_wachtwoord = password_hash($password, PASSWORD_DEFAULT);
 
 			//save to database
-			$id = random_num(20);
-			$query = "insert into login (username,email,wachtwoord) values ('$username','$email','$hashed_password')";
-			$sql = "INSTERT INTO users (email, wachtwoord) VALUES ('$email',$hashed_wachtwoord')";
+			// $id = random_num(20);
+			// $query = "insert into login (username,email,wachtwoord) values ('$username','$email','$hashed_wachtwoord')";
+			// $sql = "INSERT INTO users (email, wachtwoord) VALUES ('$email',$hashed_wachtwoord')";
 
-			mysqli_query($con, $query);
+			// mysqli_query($conn, $query);
+
+			$stmt = $conn->prepare("INSERT INTO users (email, wachtwoord) VALUES (?, ?)");
+			// $stmt->bind_param("ss", $email, $hashed_wachtwoord);
+			echo "email=$email, hash= $hashed_wachtwoord";
+			$stmt->bind_param("ss",$email,$hashed_wachtwoord);
+
+			if ($stmt->execute()){
 
 			header("Location: login.php");
 			die;
 		}else
 		{
+
+}
 			echo "Please enter some valid information!";
 		}
 	}

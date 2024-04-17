@@ -5,7 +5,7 @@ $username = "root";
 $wachtwoord = "";
 $dbname = "apotheek";
 
-if(!$con = mysqli_connect($servername, $username, $wachtwoord, $dbname))
+if(!$conn = mysqli_connect($servername, $username, $wachtwoord, $dbname))
 {
 
 	die("failed to connect!");
