@@ -53,7 +53,7 @@ session_start();
 <link rel="stylesheet" href="styles.css">
 <div id="container">
         <div id="logo">
-            <img src="1.png" alt="Logo" width="300">
+            <img src="appotheek_logo.png" alt="Logo" width="300">
         </div>
 		
 		<form method="post">
